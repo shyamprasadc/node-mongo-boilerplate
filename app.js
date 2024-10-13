@@ -14,6 +14,8 @@ require('./models');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
+
+// handle security issues using cors and helmet
 app.use(cors());
 app.options('*', cors());
 app.use(helmet());
